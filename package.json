@@ -1,0 +1,40 @@
+{
+  "name": "morsel",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A food tracker for every cuisine — katori, roti and grams alike. Offline-first PWA + Android app.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:pages": "cross-env GITHUB_PAGES=true npm run build",
+    "preview": "vite preview",
+    "icons": "node scripts/make-icons.mjs",
+    "android:sync": "npm run build && npx cap sync android",
+    "android:open": "npx cap open android"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/core": "^8.6.0",
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "fuse.js": "^7.5.0",
+    "lucide-react": "^1.67.0",
+    "motion": "^14.9.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zustand": "^5.0.16"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.6.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "cross-env": "^10.1.0",
+    "sharp": "^0.35.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vite-plugin-pwa": "^2.0.0",
+    "workbox-window": "^7.4.1"
+  }
+}
